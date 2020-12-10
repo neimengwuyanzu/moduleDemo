@@ -1,0 +1,7 @@
+include ':Baselibrary'
+include ':L_library'
+include ':S_library'
+include ':M_library'
+include ':N_library'
+include ':app'
+rootProject.name = "LibTest"

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_n"
+        android:title="跳转N"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_m"
+        android:title="跳转M"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_s"
+        android:title="跳转S"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_l"
+        android:title="跳转L"
+        app:showAsAction="never" />
+
+</menu>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".LActivity">
+
+    <fragment
+        android:id="@+id/mFindFragment"
+        android:name="com.example.l_library.fragment.L_Fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:tag="L" />
+
+</LinearLayout>
