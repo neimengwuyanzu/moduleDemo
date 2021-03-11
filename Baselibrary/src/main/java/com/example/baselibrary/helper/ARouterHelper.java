@@ -23,17 +23,17 @@ public class ARouterHelper {
         return mInstance;
     }
 
-    //-------------------------N_Module-------------------------
-    public static final String PATH_N_RUN = "/N_library/N_Activity";
+    //-------------------------M1_Module-------------------------
+    public static final String PATH_M1_RUN = "/Home_library/M1_Activity";
 
-    //-------------------------M_Module-------------------------
-    public static final String PATH_M_RUN = "/M_library/M_Activity";
+    //-------------------------M2_Module-------------------------
+    public static final String PATH_M2_RUN = "/M_library/M2_Activity";
 
-    //-------------------------S_Module-------------------------
-    public static final String PATH_S_RUN = "/S_library/S_Activity";
+    //-------------------------M3_Module-------------------------
+    public static final String PATH_M3_RUN = "/Friends_library/M3Activity";
 
-    //-------------------------L_Module-------------------------
-    public static final String PATH_L_RUN = "/L_library/L_Activity";
+    //-------------------------m4_Module-------------------------
+    public static final String PATH_M4_RUN = "/L_library/M4Activity";
 
     /**
      * 直接跳转

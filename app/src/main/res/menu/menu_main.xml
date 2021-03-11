@@ -3,23 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/menu_n"
-        android:title="跳转N"
+        android:id="@+id/menu_m1"
+        android:title="跳转M1"
         app:showAsAction="never" />
 
     <item
-        android:id="@+id/menu_m"
-        android:title="跳转M"
+        android:id="@+id/menu_m2"
+        android:title="跳转M2"
         app:showAsAction="never" />
 
     <item
-        android:id="@+id/menu_s"
-        android:title="跳转S"
+        android:id="@+id/menu_m3"
+        android:title="跳转M3"
         app:showAsAction="never" />
 
     <item
-        android:id="@+id/menu_l"
-        android:title="跳转L"
+        android:id="@+id/menu_m4"
+        android:title="跳转M4"
         app:showAsAction="never" />
 
 </menu>

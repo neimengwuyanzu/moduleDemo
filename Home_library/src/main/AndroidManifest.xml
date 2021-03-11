@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.l_library">
+    package="com.example.n_library">
 
     <application>
-        <activity android:name=".M4Activity"></activity>
+        <activity android:name=".ui.NInfoActivity"/>
+        <activity android:name=".M1_Activity" />
     </application>
 
 </manifest>

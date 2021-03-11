@@ -3,7 +3,7 @@
     package="com.example.s_library">
 
     <application>
-        <activity android:name=".SActivity"></activity>
+        <activity android:name=".M3Activity"></activity>
     </application>
 
 </manifest>

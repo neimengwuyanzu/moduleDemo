@@ -38,8 +38,8 @@ dependencies {
     implementation project(path: ':Baselibrary')
 
     if (!Boolean.valueOf(rootProject.ext.IS_BUILD_MODULE)) {
-        implementation project(path: ':N_library')
-        implementation project(path: ':M_library')
+        implementation project(path: ':Home_library')
+        implementation project(path: ':Friends_library')
         implementation project(path: ':S_library')
         implementation project(path: ':L_library')
     }

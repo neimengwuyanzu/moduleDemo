@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:orientation="vertical"
-    tools:context=".M4Activity">
+    android:orientation="vertical">
 
     <fragment
-        android:id="@+id/mFindFragment"
-        android:name="com.example.l_library.fragment.M4_Fragment"
+        android:id="@+id/mChatFragment"
+        android:name="com.example.n_library.fragment.M1_Fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:tag="L" />
+        android:tag="M1" />
 
 </LinearLayout>

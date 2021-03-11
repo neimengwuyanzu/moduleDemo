@@ -16,10 +16,10 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.example.baselibrary.base.BaseActivity;
 import com.example.baselibrary.helper.ARouterHelper;
-import com.example.l_library.fragment.L_Fragment;
-import com.example.m_library.fragment.M_Fragment;
-import com.example.n_library.fragment.N_Fragment;
-import com.example.s_library.fragment.S_Fragment;
+import com.example.l_library.fragment.M4_Fragment;
+import com.example.m_library.fragment.M2_Fragment;
+import com.example.n_library.fragment.M1_Fragment;
+import com.example.s_library.fragment.M3_Fragment;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -27,49 +27,49 @@ import butterknife.OnLongClick;
 
 public class MainActivity extends BaseActivity {
 
-    @BindView(R.id.iv_n)
+    @BindView(R.id.iv_m1)
     ImageView ivN;
-    @BindView(R.id.tv_n)
+    @BindView(R.id.tv_m1)
     TextView tvN;
-    @BindView(R.id.ll_n)
+    @BindView(R.id.ll_m1)
     LinearLayout llN;
 
-    @BindView(R.id.iv_m)
+    @BindView(R.id.iv_m2)
     ImageView ivM;
-    @BindView(R.id.tv_m)
+    @BindView(R.id.tv_m2)
     TextView tvM;
-    @BindView(R.id.ll_m)
+    @BindView(R.id.ll_m2)
     LinearLayout llM;
 
-    @BindView(R.id.iv_s)
+    @BindView(R.id.iv_m3)
     ImageView ivS;
-    @BindView(R.id.tv_s)
+    @BindView(R.id.tv_m3)
     TextView tvS;
-    @BindView(R.id.ll_s)
+    @BindView(R.id.ll_m3)
     LinearLayout llS;
 
-    @BindView(R.id.iv_l)
+    @BindView(R.id.iv_m4)
     ImageView ivL;
-    @BindView(R.id.tv_l)
+    @BindView(R.id.tv_m4)
     TextView tvL;
-    @BindView(R.id.ll_l)
+    @BindView(R.id.ll_m4)
     LinearLayout llL;
 
 
     //N
-    private N_Fragment mNFragment;
+    private M1_Fragment mNFragment;
     private FragmentTransaction mNTransaction;
 
     //M
-    private M_Fragment mMFragment;
+    private M2_Fragment mMFragment;
     private FragmentTransaction mMTransaction;
 
     //S
-    private S_Fragment mSFragment;
+    private M3_Fragment mSFragment;
     private FragmentTransaction mSTransaction;
 
     //L
-    private L_Fragment mLFragment;
+    private M4_Fragment mLFragment;
     private FragmentTransaction mLTransaction;
 
     @Override
@@ -85,10 +85,10 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initData() {
-        tvN.setText("N");
-        tvM.setText("M");
-        tvS.setText("S");
-        tvL.setText("L");
+        tvN.setText("M1");
+        tvM.setText("M2");
+        tvS.setText("M3");
+        tvL.setText("M4");
     }
 
     @Override
@@ -96,25 +96,25 @@ public class MainActivity extends BaseActivity {
 
     }
 
-    @OnLongClick({R.id.ll_n,
-            R.id.ll_m,
-            R.id.ll_s,
-            R.id.ll_l})
+    @OnLongClick({R.id.ll_m1,
+            R.id.ll_m2,
+            R.id.ll_m3,
+            R.id.ll_m4})
     public void onViewLongClick(View v) {
         switch (v.getId()) {
-            case R.id.ll_n:
+            case R.id.ll_m1:
                 showToast("n");
                 Log.d("fragment 生命周期", "N长按");
                 break;
-            case R.id.ll_m:
+            case R.id.ll_m2:
                 showToast("m");
                 Log.d("fragment 生命周期", "M长按");
                 break;
-            case R.id.ll_s:
+            case R.id.ll_m3:
                 showToast("s");
                 Log.d("fragment 生命周期", "S长按");
                 break;
-            case R.id.ll_l:
+            case R.id.ll_m4:
                 showToast("l");
                 Log.d("fragment 生命周期", "L长按");
                 break;
@@ -125,22 +125,22 @@ public class MainActivity extends BaseActivity {
         Toast.makeText(MainActivity.this, n, Toast.LENGTH_SHORT).show();
     }
 
-    @OnClick({R.id.ll_n,
-            R.id.ll_m,
-            R.id.ll_s,
-            R.id.ll_l})
+    @OnClick({R.id.ll_m1,
+            R.id.ll_m2,
+            R.id.ll_m3,
+            R.id.ll_m4})
     public void onViewClick(View v) {
         switch (v.getId()) {
-            case R.id.ll_n:
+            case R.id.ll_m1:
                 switchMainTab(0);
                 break;
-            case R.id.ll_m:
+            case R.id.ll_m2:
                 switchMainTab(1);
                 break;
-            case R.id.ll_s:
+            case R.id.ll_m3:
                 switchMainTab(2);
                 break;
-            case R.id.ll_l:
+            case R.id.ll_m4:
                 switchMainTab(3);
                 break;
         }
@@ -153,28 +153,28 @@ public class MainActivity extends BaseActivity {
     private void initFragment() {
 
         if (mNFragment == null) {
-            mNFragment = new N_Fragment();
+            mNFragment = new M1_Fragment();
             mNTransaction = getSupportFragmentManager().beginTransaction();
             mNTransaction.add(R.id.mContentLayout, mNFragment);
             mNTransaction.commit();
         }
 
         if (mMFragment == null) {
-            mMFragment = new M_Fragment();
+            mMFragment = new M2_Fragment();
             mMTransaction = getSupportFragmentManager().beginTransaction();
             mMTransaction.add(R.id.mContentLayout, mMFragment);
             mMTransaction.commit();
         }
 
         if (mSFragment == null) {
-            mSFragment = new S_Fragment();
+            mSFragment = new M3_Fragment();
             mSTransaction = getSupportFragmentManager().beginTransaction();
             mSTransaction.add(R.id.mContentLayout, mSFragment);
             mSTransaction.commit();
         }
 
         if (mLFragment == null) {
-            mLFragment = new L_Fragment();
+            mLFragment = new M4_Fragment();
             mLTransaction = getSupportFragmentManager().beginTransaction();
             mLTransaction.add(R.id.mContentLayout, mLFragment);
             mLTransaction.commit();
@@ -202,7 +202,7 @@ public class MainActivity extends BaseActivity {
                 tvS.setTextColor(Color.BLACK);
                 tvL.setTextColor(Color.BLACK);
 
-                setTitleBarName("N");
+                setTitleBarName("M1");
 
                 break;
             case 1:
@@ -218,7 +218,7 @@ public class MainActivity extends BaseActivity {
                 tvS.setTextColor(Color.BLACK);
                 tvL.setTextColor(Color.BLACK);
 
-                setTitleBarName("M");
+                setTitleBarName("M2");
 
                 break;
             case 2:
@@ -234,7 +234,7 @@ public class MainActivity extends BaseActivity {
                 tvS.setTextColor(getResources().getColor(R.color.colorMain));
                 tvL.setTextColor(Color.BLACK);
 
-                setTitleBarName("S");
+                setTitleBarName("M3");
 
                 break;
             case 3:
@@ -250,7 +250,7 @@ public class MainActivity extends BaseActivity {
                 tvS.setTextColor(Color.BLACK);
                 tvL.setTextColor(getResources().getColor(R.color.colorMain));
 
-                setTitleBarName("L");
+                setTitleBarName("M4");
 
                 break;
         }
@@ -310,17 +310,17 @@ public class MainActivity extends BaseActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.menu_n:
-                ARouterHelper.getInstance().build(ARouterHelper.PATH_N_RUN);
+            case R.id.menu_m1:
+                ARouterHelper.getInstance().build(ARouterHelper.PATH_M1_RUN);
                 break;
-            case R.id.menu_m:
-                ARouterHelper.getInstance().build(ARouterHelper.PATH_M_RUN);
+            case R.id.menu_m2:
+                ARouterHelper.getInstance().build(ARouterHelper.PATH_M2_RUN);
                 break;
-            case R.id.menu_s:
-                ARouterHelper.getInstance().build(ARouterHelper.PATH_S_RUN);
+            case R.id.menu_m3:
+                ARouterHelper.getInstance().build(ARouterHelper.PATH_M3_RUN);
                 break;
-            case R.id.menu_l:
-                ARouterHelper.getInstance().build(ARouterHelper.PATH_L_RUN);
+            case R.id.menu_m4:
+                ARouterHelper.getInstance().build(ARouterHelper.PATH_M4_RUN);
                 break;
         }
         return super.onOptionsItemSelected(item);

@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SActivity">
+    tools:context=".M3Activity">
     <fragment
         android:id="@+id/mFindFragment"
-        android:name="com.example.s_library.fragment.S_Fragment"
+        android:name="com.example.s_library.fragment.M3_Fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:tag="S" />
